@@ -19,6 +19,32 @@
       </div>
     </div>
   </section>
+  <section id="wrapSpiegazioneGenerale">
+    <div class="container">
+      <?php $the_query = new WP_Query( 'cat=3' ); ?>
+      <?php while ( $the_query->have_posts() ) :
+	       $the_query->the_post(); ?>
+      <div class="wrapSpiegazioneGeneraleContent">
+        <div class="wrapImgKart">
+          <?php the_post_thumbnail(); ?>
+        </div>
+        <div>
+          <div class="wrapSpiegazioneText">
+            <h2><?php the_title(); ?></h2>
+            <?php the_content(); ?>
+            <div class="wrapButton">
+              <a class="btnIscriviti black" href="#">VOGLIO PARTECIPARE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php endwhile;
+          // Ripristina Query & Post Data originali
+          wp_reset_query();
+          wp_reset_postdata();
+      ?>
+    </div>
+  </section>
 
 </main>
 <?php get_footer(); ?>
