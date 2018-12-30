@@ -329,7 +329,7 @@ main #wrapIntroContent {
 /***************************************/
 #circuiti,
 #modalita {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #000;
 }
@@ -346,6 +346,7 @@ main #wrapIntroContent {
 #wrapTextCircuiti {
   width: 60%;
   height: 100%;
+  color: #fff;
 }
 
 #wrapLogoCircuiti {
@@ -404,10 +405,12 @@ main #wrapIntroContent {
 }
 
 #wrapPagamenti h2 {
-  font-size: 16px;
+  font-size: 23px;
 }
 
 #wrapPagamenti p {
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 11px;
 }
 
@@ -436,4 +439,14 @@ footer {
   justify-content: center;
   align-items: flex-start;
   height: 100%;
+}
+
+/**ARTICOLI INTERNI **/
+.wrapArticolo {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.wrapArticolo h2 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
